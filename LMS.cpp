@@ -454,6 +454,7 @@ public:
                 cout << "Enter quantity: ";
                 cin >> quantity;
                 books.addBook(conn, name, author, quantity);
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 break;
             }
             case 2:
@@ -462,6 +463,7 @@ public:
                 cout << "Enter book name to delete: ";
                 cin >> name;
                 books.deleteBook(conn, name);
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 break;
             }
             case 3:
@@ -470,10 +472,12 @@ public:
                 cout << "Enter book name to search: ";
                 cin >> name;
                 books.searchBook(conn, name);
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 break;
             }
             case 4:
                 books.displayAllBooks(conn);
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 break;
             case 5:
             {
@@ -483,6 +487,7 @@ public:
                 cout << "Enter book name to issue: ";
                 cin >> book_name;
                 books.issueBook(conn, roll_num, book_name);
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 break;
             }
             case 6:
@@ -493,31 +498,37 @@ public:
                 cout << "Enter book name to return: ";
                 cin >> book_name;
                 books.returnBook(conn, roll_num, book_name);
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 break;
             }
             case 7:
             {
                 viewAllBorrowedBooks(conn);
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 break;
             }
             case 8:
             {
                 registerStudent(conn);
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 break;
             }
             case 9:
             {
                 deleteStudent(conn);
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 break;
             }
             case 10:
             {
                 displayAllStudents(conn);
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 break;
             }
             case 11:
             {
                 createAdmin(conn);
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 break;
             }
             case 12:
@@ -695,10 +706,12 @@ public:
                 cout << "Enter book name to search: ";
                 cin >> name;
                 books.searchBook(conn, name);
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 break;
             }
             case 2:
                 books.displayAllBooks(conn);
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 break;
             case 3:
             {
@@ -728,6 +741,7 @@ public:
                 cout << "Enter your roll number: ";
                 cin >> roll_num;
                 viewBorrowedBooks(conn, roll_num);
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 break;
             }
             case 6:
